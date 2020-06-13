@@ -1,7 +1,7 @@
 {
-  "name": "pwa-gram",
+  "name": "pwa-snap",
   "version": "1.0.0",
-  "description": "PWA for Instagram clone",
+  "description": "A PWA for snap and post",
   "main": "index.js",
   "scripts": {
     "start": "http-server -c-1"
