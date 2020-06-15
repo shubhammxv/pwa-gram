@@ -4,6 +4,20 @@ var closeCreatePostModalButton = document.querySelector('#close-create-post-moda
 
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice
+    .then((choice) => {
+      console.log("User Choice", choice.outcome);
+      if (choice.outcome === 'dismissed') {
+        console.log("user declined adding to home screen!");
+      } else {
+        console.log("User added the app to home screen! Voila!")
+      }
+    })
+    deferredPrompt = null;
+  }
 }
 
 function closeCreatePostModal() {
